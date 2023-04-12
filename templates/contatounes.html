@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+    <style>
+        body {
+        background-image: url(/static/img/fundo2.png);
+        background-position: top left;
+        }
+        </style>
+
+</div>
+<div style= "height:100px; top: 125px; left: 150px; position: absolute;"><h2>Entre em contato</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, impedit.</p>
+    <hr width="910px;">
+    <form>
+        <label for="email">Seu email:</label><br>
+        <input type="email" id="email" email="email"><br>
+        <label for="assunto">Assunto:</label><br>
+        <input type="text" id="assunto" name="assunto"><br>
+        <label for="descrição">Descrição:</label><br>
+        <input id = desc type="text"id="descrição" name="desc" style="height: 35px;"><br><br>
+        <input type="submit" value="Enviar">
+      </form>
+      
+    </div>
+    <div style="top: 400px; position:relative; text-align:center"><h3>Todos os direitos reservados</h3>
+    </div>
+    
+    {% endblock %} 
