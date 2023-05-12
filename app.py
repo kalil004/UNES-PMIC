@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -18,4 +18,7 @@ def quemsomos():
 def contato():
     return render_template('contatounes.html')
 
+@app.route("/users/")
+def users():
+    return render_template('users.html')
 
