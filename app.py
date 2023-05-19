@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 app.config['MYSQL_Host'] = 'localhost' # 127.0.0.1
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '12345678'
+app.config['MYSQL_PASSWORD'] = 'fatec'
 app.config['MYSQL_DB'] = 'unes'
 
 mysql = MySQL(app)
@@ -46,7 +46,7 @@ def contatos():
 
 
 # rota usuários para listar todos os usuário no banco de dados.
-@app.route('/users')
+@app.route('/users/')
 def users():
     cur = mysql.connection.cursor()
 
