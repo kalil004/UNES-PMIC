@@ -1,9 +1,40 @@
-#sobre {
-text-align: justify;
-text-justify: inter-word;
+body{
+    padding: 0%;
+    margin: 0 auto;
+    max-width: 80%;
+    border: 0px;
+    background-image: url(/static/img/fundo2.png);
+
 }
 
-#sobre2 {
-    text-align: justify;
-    text-justify: inter-word;
-    }
+h4{
+    text-align: center;
+}
+
+#fundo2{
+    background-image: 
+    url(/static/img/fundo2.png);
+    
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1%;
+    padding-bottom: 3.5%;
+    justify-content: space-between;
+    border: 1px  transparent;
+ }
+
+.capa{
+    text-align: center;
+ }
+
+ .display{
+    text-align: center;
+ }
+ 
+ .center {
+
+    text-align: center;
+  }

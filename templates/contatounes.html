@@ -1,33 +1,28 @@
 {% extends "base.html" %}
-{% extends "bootstrap/base.html" %} {% block content %}
+{% block content %}
 {% block conteudo %}
 
-    <style>
-        body {
-        background-image: url(/static/img/fundo2.png);
-        background-position: top left;
-        }
-        </style>
-
-</div>
-<div style= "height:100px; top: 125px; left: 500px; position: absolute;"><h2>Entre em contato</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, impedit.</p>
-
-<hr>
-
-    <form>
-        <label for="email">Seu email:</label><br>
-        <input type="email" id="email" email="email"><br>
-        <label for="assunto">Assunto:</label><br>
-        <input type="text" id="assunto" name="assunto"><br>
-        <label for="descrição">Descrição:</label><br>
-        <input id = desc type="text"id="descrição" name="desc" style="height: 35px;"><br><br>
+<div class="form">
+    <h2>Entre em contato</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde architecto et exercitationem quidem asperiores animi iure laboriosam facilis in corporis velit nulla deserunt repudiandae, voluptate neque dignissimos ducimus obcaecati fuga?</p>
+    <hr>
+    <label for="email">Seu email:</label><br>
+    <input type="email" name="email" id="email"><br>
+    <label for="assunto">Assunto:</label><br>
+    <input type="text" name="assunto" id="assunto"><br>
+    <label for="descrição">Descrição:</label><br>
+    <textarea name="descrição" id="descrição" cols="30" rows="3"></textarea><br>
+    <input type="submit" name="enviar" id="enviar">
+    <form method="post" action="/contatos">
+        Seu e-mail:<br>
+        <input type="text" name="email" required><br>
+        Assunto:<br>
+        <input type="text" name="assunto" required><br>
+        Descrição:<br>
+        <input type="text" name="descricao" required><br>      
         <input type="submit" value="Enviar">
-      </form>
-      
-    </div>
-    <div style="top: 400px; position:relative; text-align:center"><h3>Todos os direitos reservados</h3>
-    </div>
-    
-    {% endblock %} 
-    {% endblock content %}
+    </form>
+</div>
+
+{% endblock %} 
+{% endblock content %}
