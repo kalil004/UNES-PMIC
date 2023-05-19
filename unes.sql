@@ -8,5 +8,5 @@ assunto varchar(20),
 descricao varchar(200)
 )
 
-
-
+alter user "root'@'localhost" IDENTIFIED BY 'fatec';
+grant all privileges on unes * to "root"@"localhost"
