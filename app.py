@@ -26,12 +26,8 @@ def quemsomos():
 def contato():
     return render_template('contatounes.html')
 
-@app.route("/users/")
-def usuarios():
-    return render_template('users.html')
 
-
-@app.route('/contatos', methods=['GET', 'POST'])
+@app.route("/contato/", methods=['GET', 'POST'])
 def contatos():
     if request.method == "POST":
         email = request.form['email']
