@@ -1,39 +1,32 @@
 {% extends "base.html"%}
-
 {% block conteudo %}
-  <title>Users</title>
 
-  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css')}}">
+<h2>Mensagens enviadas</h2>
+<div class="center">
 
-<body>   
+<div style="overflow-x:auto;">
+    <table id="users" class="display">
 
-<table id="users" class="display">
-    <thead>
+    <tr>
+        <th>E-mail</th>
+        <th>Assunto</th>
+        <th>Descrição</th>
 
-        <tr>
-            <th>E-mail</th>
-            <th>Assunto</th>
-            <th>Descrição</th>
+    </tr>
 
-        </tr>
-    </thead>
-    
-    {% for user in userDetails %}
-    
-    <tbody>
-        <tr>
-            <td>{{user[0]}}</td>
-            <td>{{user[1]}}</td>
-            <td>{{user[2]}}</td>
-        </tr>
-    </tbody>
-   
+{% for user in userDetails %}
 
-    {% endfor %}
+<tbody>
+    <tr>
+        <td>{{user[0]}}</td>
+        <td>{{user[1]}}</td>
+        <td>{{user[2]}}</td>
+    </tr>
+</tbody>
+
+{% endfor %}
 
 </table>
+</div>
 
-{% endblock %}
-</body>
-</html>
+{% endblock %} 

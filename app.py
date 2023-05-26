@@ -1,9 +1,9 @@
-from flask import Flask, render_template, request, url_for, jsonify
+from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
-app.config['MYSQL_Host'] = 'localhost' # 127.0.0.1
+app.config['MYSQL_Host'] = '127.0.0.1' # 127.0.0.1
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'fatec'
 app.config['MYSQL_DB'] = 'unes'
@@ -14,20 +14,15 @@ mysql = MySQL(app)
 def main():
     return render_template('homeunes.html')
 
-@app.route("/home/")
-def home():
-    return render_template('homeunes.html')
-
-@app.route("/quemsomos/")
+@app.route("/quemsomos")
 def quemsomos():
     return render_template('quemsomosunes.html')
 
-@app.route("/contato/")
-def contato():
-    return render_template('contatounes.html')
+@app.route("/users")
+def usuarios():
+    return render_template('users.html')
 
-
-@app.route("/contato/", methods=['GET', 'POST'])
+@app.route("/contato", methods=['GET', 'POST'])
 def contatos():
     if request.method == "POST":
         email = request.form['email']
@@ -40,13 +35,13 @@ def contatos():
         mysql.connection.commit()
         
         cur.close()
-
-        return 'sucesso'
-    return render_template('contatos.html')
+        
+        return 'sucesso' and render_template("contatounes.html")
+    return render_template('contatounes.html')
 
 
 # rota usuários para listar todos os usuário no banco de dados.
-@app.route('/users/')
+@app.route('/users')
 def users():
     cur = mysql.connection.cursor()
 
@@ -56,5 +51,3 @@ def users():
         userDetails = cur.fetchall()
 
         return render_template("users.html", userDetails=userDetails)
-
-app.run(debug=True)
