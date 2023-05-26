@@ -3,7 +3,7 @@ from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
-app.config['MYSQL_Host'] = '127.0.0.1' # 127.0.0.1
+app.config['MYSQL_Host'] = 'localhost' # 127.0.0.1
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'fatec'
 app.config['MYSQL_DB'] = 'unes'
@@ -36,7 +36,7 @@ def contatos():
         
         cur.close()
         
-        return 'sucesso' and render_template("contatounes.html")
+        return "Sucesso"
     return render_template('contatounes.html')
 
 

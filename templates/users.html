@@ -7,6 +7,8 @@
 <div style="overflow-x:auto;">
     <table id="users" class="display">
 
+    
+
     <tr>
         <th>E-mail</th>
         <th>Assunto</th>
@@ -14,7 +16,7 @@
 
     </tr>
 
-{% for user in userDetails %}
+{% for users in userDetails %}
 
 <tbody>
     <tr>
@@ -25,8 +27,7 @@
 </tbody>
 
 {% endfor %}
-
-</table>
+    </table>
 </div>
 
 {% endblock %} 
