@@ -1,33 +1,31 @@
-{% extends "base.html"%}
+{% extends 'base.html' %}
+
 {% block conteudo %}
-
-<h2>Mensagens enviadas</h2>
-<div class="center">
-
-<div style="overflow-x:auto;">
-    <table id="users" class="display">
-
+<br><hr><br><br><br><br><br>
+<div>
+    <table>
     
-
-    <tr>
-        <th>E-mail</th>
-        <th>Assunto</th>
-        <th>Descrição</th>
-
-    </tr>
-
-{% for users in userDetails %}
-
-<tbody>
-    <tr>
-        <td>{{user[0]}}</td>
-        <td>{{user[1]}}</td>
-        <td>{{user[2]}}</td>
-    </tr>
-</tbody>
-
-{% endfor %}
+        <tr>
+    
+            <th id="desc">E-mail</th>      
+            <th id="desc">Assunto</th>
+            <th id="desc">Descrição</th>  
+        </tr>
+    
+        {% for user in userDetails %}
+        
+        <tbody>
+            <tr>
+                <td id="desc">{{user[0]}}</td>
+                <td id="desc">{{user[1]}}</td>
+                <td id="desc">{{user[2]}}</td>
+            </tr>
+        </tbody>
+       
+    
+        {% endfor %}
+    
     </table>
 </div>
 
-{% endblock %} 
+{% endblock %}

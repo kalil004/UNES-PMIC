@@ -1,11 +1,8 @@
-create database unes;
-use unes; 
+create database desafio3;
+use desafio3;
 
 create table contatos(
-email varchar(70),
-assunto varchar(20),
-descricao varchar(200)
-);
-
-create user "root'@'localhost" IDENTIFIED BY 'fatec';
-grant all privileges on unes to "root"@"localhost"
+	email varchar(60),
+    assunto varchar(60),
+    descricao varchar(200)
+    );
