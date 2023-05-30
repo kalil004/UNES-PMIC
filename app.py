@@ -23,7 +23,6 @@ def index():
 def quemsomos():
     return render_template('quemsomos.html')
 
-
 @app.route('/contato', methods=['GET','POST'])
 def contato():
     if request.method == 'POST':
@@ -51,3 +50,4 @@ def users():
         userDetails = cur.fetchall()
 
         return render_template("users.html", userDetails=userDetails)
+    return render_template("users.html")
